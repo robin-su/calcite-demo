@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "defaultSchema": "foodmart",
+  "schemas": [
+    {
+      "type": "custom",
+      "name": "foodmart",
+      "factory": "com.calcite.demo.redis.RedisSchemaFactory",
+      "operand": {
+        "host": "127.0.0.1",
+        "port": 6379,
+        "database": 0,
+        "password": ""
+      },
+      "tables": [
+        {
+          "name": "stu_01",
+          "factory": "com.calcite.demo.redis.RedisTableFactory",
+          "operand": {
+            "dataFormat": "json",
+            "fields": [
+              {
+                "name": "name",
+                "type": "varchar",
+                "mapping": "name"
+              },
+              {
+                "name": "score",
+                "type": "integer",
+                "mapping": "score"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+
