@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "defaultSchema": "PG",
+  "schemas": [
+    {
+      "name": "PG",
+      "type": "custom",
+      "factory": "com.calcite.demo.pg.PostgreSqlSchemaFactory",
+      "operand": {
+        "url": "jdbc:postgresql://127.0.0.1:5432/postgres",
+        "user": "postgres",
+        "password": "123456"
+      }
+    }
+  ]
+}
